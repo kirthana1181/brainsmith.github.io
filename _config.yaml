@@ -1,0 +1,37 @@
+site.title: Brainsmith
+site.description: Automated FPGA Dataflow Accelerator Generation
+site.url: https://kirthana1181.github.io/brainsmith.github.io
+
+# Theme
+theme: jekyll-theme-minimal  # or another Jekyll theme you prefer
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Collections for organizing documentation
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
+
+# Navigation
+header_pages:
+  - docs/index.md
+  - docs/installation.md
+  - docs/getting-started.md
+
+.
+├── _config.yml              # Jekyll config (create this)
+├── index.md                 # Homepage
+├── _docs/                   # Documentation collection
+│   ├── index.md
+│   ├── installation.md
+│   ├── getting-started.md
+│   ├── usage.md
+│   └── api-reference.md
+├── _posts/                  # Blog posts (optional)
+├── assets/                  # Images, CSS, etc.
+│   ├── css/
+│   └── images/
+└── README.md

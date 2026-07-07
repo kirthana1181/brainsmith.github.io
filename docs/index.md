@@ -14,6 +14,8 @@ Key stages in generating the final output include:
 - IP packaging: Creating Vivado IP Cores
 - Simulation: Verifying correctness with RTL simulation in Vivado (of RTL file/bitfile)
 
+  
+
 # Installation requirements for Brainsmith Compiler
 
 1. Ubuntu 22.04+ (primary development/testing platform)

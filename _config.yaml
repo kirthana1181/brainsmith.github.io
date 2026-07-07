@@ -19,17 +19,15 @@ collections:
 header_pages:
   - docs/index.md
   - docs/installation.md
-  - docs/getting-started.md
-
+  - docs/usage.md
 .
 ├── _config.yml              # Jekyll config (create this)
 ├── index.md                 # Homepage
 ├── _docs/                   # Documentation collection
 │   ├── index.md
-│   ├── installation.md
-│   ├── getting-started.md
+│   ├── setup.md
 │   ├── usage.md
-│   └── api-reference.md
+│   └── api_reference.md
 ├── _posts/                  # Blog posts (optional)
 ├── assets/                  # Images, CSS, etc.
 │   ├── css/

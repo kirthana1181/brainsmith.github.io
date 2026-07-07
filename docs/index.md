@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Brainsmith Compiler Log
+title: Brainsmith
 ---
 
 # Brainsmith

@@ -26,8 +26,7 @@ header_pages:
 ├── _docs/                   # Documentation collection
 │   ├── index.md
 │   ├── setup.md
-│   ├── usage.md
-│   └── api_reference.md
+│   └── usage.md
 ├── _posts/                  # Blog posts (optional)
 ├── assets/                  # Images, CSS, etc.
 │   ├── css/

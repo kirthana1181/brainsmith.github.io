@@ -5,6 +5,8 @@ title: Installation
 
 # Steps to install Brainsmith
 
+There were many dependency issues faced at the time of the compiler installation due to deprecated libraries and modules or dependency onto older versions of the python libraries and missing dependencies.
+
 1. Git clone the repo:
 
        git clone https://github.com/microsoft/brainsmith.git ./brainsmith

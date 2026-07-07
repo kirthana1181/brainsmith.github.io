@@ -43,7 +43,7 @@ There were many dependency issues faced at the time of the compiler installation
    
 6. Now, the shell script can be executed to resume the Brainsmith compiler installation, using the '_force_' keyword:
 
-       (brainsmith-py3.11) kirthanar@KirthanaR:~/brainsmith$ ./setup-venv.sh   - -force
+       (brainsmith-py3.11) kirthanar@KirthanaR:~/brainsmith$ ./setup-venv.sh --force
 
    Incase of an error again, w.r.t the '_pkg_resources_' library, run the followng command, under the brainsmith directory:
    

@@ -32,6 +32,7 @@ Ensure 'smith' command line has been installed, which is used to run the compile
 
 ## Get Started
 [Start Building]('/docs/setup')
+[End-to-End flow]('/docs/flow')
 
 ## Quick Links
-- [Getting Started](/docs/usage)
+[Getting Started](/docs/usage)

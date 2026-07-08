@@ -39,6 +39,8 @@
 
 3. Resulting reports:
 
+   The reports generated depend on the type of final output ('estimates', 'rtl' or 'bitfile')
+
 - **`estimate_layer_config_alternatives.json`** - Alternative hardware configurations for each layer
 - **`estimate_layer_cycles.json`** - Estimated clock cycles required per layer
 - **`estimate_layer_resources.json`** - FPGA resource utilization estimates (DSP, BRAM, LUT)

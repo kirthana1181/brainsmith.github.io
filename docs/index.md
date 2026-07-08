@@ -14,7 +14,12 @@ Key stages in generating the final output include:
 - IP packaging: Creating Vivado IP Cores
 - Simulation: Verifying correctness with RTL simulation in Vivado (of RTL file/bitfile)
 
-  
+Key features:
+
+**Automated Design** - Handles kernel selection and IP generation  
+**Optimized Performance** - FIFO sizing and parallelization  
+**Easy Integration** - Seamless Vivado compatibility  
+ 
 
 # Installation requirements for Brainsmith Compiler
 
@@ -25,6 +30,8 @@ Key stages in generating the final output include:
    
 Ensure 'smith' command line has been installed, which is used to run the compiler and create our streamlined dataflow-accelerators (DFA).
 
+## Get Started
+[Start Building]('/docs/setup')
+
 ## Quick Links
-- [Installation Guide](/docs/setup)
 - [Getting Started](/docs/usage)

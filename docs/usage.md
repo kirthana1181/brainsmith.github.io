@@ -10,6 +10,8 @@
 | `brainsmith registry` | List all registered components and available dataflow accelerators |
 | `brainsmith setup cppsim` | Setup and configure C++ simulation environment for testing |
 
+Refer to this [github file](https://github.com/microsoft/brainsmith/blob/6b1e9ef1bee0ce63561d32ccbf16b33ae2cdff80/docs/api/cli.md) which explains further commands in Brainsmith CLI.
+
 ------------------------------------------------------------------------
 
 1. Running the compiler: generates the streaming dataflow accelerator.

@@ -30,9 +30,19 @@ Key features:
    
 Ensure 'smith' command line has been installed, which is used to run the compiler and create our streamlined dataflow-accelerators (DFA).
 
-## Get Started
-[Start Building]('/docs/setup')
-[End-to-End flow]('/docs/flow')
+# Understanding Brainsmith
+
+Brainsmith is nothing but a tool stitched out of these open-source tools: Brevitas, QONNX and FINN Compiler, to build stitched IP of large neural networks for deployment of high-performance neural network accelerator design by specializing hardware through customizable RTL generation and dataflow modeling.
+
+1. Train a custom quantized neural network (QNN) in Brevitas. Follow how to do quantization aware training (QAT) using [Brevitas](https://xilinx.github.io/brevitas/v0.12.1/tutorials/tvmcon2021.html).
+2. Export your model to [QONNX](https://qonnx.readthedocs.io/en/latest/).
+3. Use FINN build_dataflow functionality on the exported model following this [link](https://github.com/Xilinx/finn/blob/main/src/finn/builder/build_dataflow_steps.py) to write down the required steps in the blueprint(.yaml) or for a complex builder settings follow this [tutorial](https://github.com/Xilinx/finn/blob/main/notebooks/advanced/4_advanced_builder_settings.ipynb)
+4. Tweak your QNN topology, quantization setup and build_dataflow parameters to obtain the desired outcome.
+5. Define and state the build dataflow steps as per the neural network required to be deployed, using [FINN and QONNX](https://finn.readthedocs.io/en/latest/source_code/finn.transformation.html) transformations, and execute the compiler command to build the streaming dataflow accelerator.
+
+### [Getting Started](/docs/usage)
 
 ## Quick Links
-[Getting Started](/docs/usage)
+- [Start Building]('/docs/setup')
+- [End-to-End flow]('/docs/flow')
+

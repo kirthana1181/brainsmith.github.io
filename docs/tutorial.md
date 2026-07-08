@@ -29,8 +29,13 @@ Refer to the examples and the requirements to execute the build flow.
 # 2. Pytorch script
 
 This script should contain the neural network architecuture either imported from platforms like huggingface or created using modelwrappers from QONNX.
+The following are the scripts utilised to compile and generate the streaming dataflow accelerator:
 - model import/build script
 - custom steps script
+
+# 3. ONNX file
+
+The quantized ONNX file is generated as a result of the compilation of the model import/build script, which is constructed using QONNX and Brevitas.
 
 
 

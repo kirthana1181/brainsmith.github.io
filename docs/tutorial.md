@@ -7,6 +7,7 @@ Refer to the examples and the requirements to execute the build flow.
 1. Blueprint file (.yaml): defines the hardware design space definition with inheritance.
 2. Quantized ONNX graph (.onnx): quantization parameters (bit widths, scales, thresholds) are baked into the model structure, making it hardware-aware, and used for Intermediate Representation (IR).​
 3. Python Model build/import script (.py): loads the trained model (typically from PyTorch/Brevitas) and exports it into the ONNX format with quantization operators embedded in the graph.
+4. Custom Steps scipt (.py) (optional) : defines and exports custom build steps, which are defined specific to the application(Model), using QONNX and FINN transformations over the ONNX file of the application/Model.
 
 # 1. Blueprint file
 
@@ -33,9 +34,35 @@ The following are the scripts utilised to compile and generate the streaming dat
 - model import/build script
 - custom steps script
 
+The build script we saved in the case of our examples is named as _model.py_ , and the custom steps file is named as _custom_steps.py_. The python script which defines the folding configuration w.r.t the Output onnx file is described in the specific to the output onnx graph _gen_folding.py_.
+
 # 3. ONNX file
 
-The quantized ONNX file is generated as a result of the compilation of the model import/build script, which is constructed using QONNX and Brevitas.
+The quantized ONNX file is generated as a result of the compilation of the model import/build script, which is constructed using QONNX and Brevitas libraeies. Both the origin and cleaned up ONNX graphs are generated using this build script, with the help of transformations from the custom_steps script.
 
+## Steps to compile and create the streaming dataflow accelerator in Brainsmith:
+
+1. Enable the virtual environment using the following command or similar:
+
+       source .venv/bin/activate
+
+   OR
+
+       python -m venv venv
+3. Define the project directory using the command:
+
+       brainsmith project init <project name>
+   
+   In our LeNet-5 example, we have named the project as the Model we are trying to implement i.e. '**lenet**'.
+
+4. Enable the environment using the command: "_**direnv allow**_".
+5. Define the model bluprint, model build and custom steps scripts.
+     - Use [this link()1](https://github.com/microsoft/brainsmith/blob/main/examples/blueprints/base.yaml) to view the basic blueprint file template and steps.
+     - Refer to [this link](https://github.com/Xilinx/finn/blob/main/src/finn/builder/build_dataflow_steps.py) to view the description of basic dataflow steps, mentioned under the blueprint;'s "**design_space**" section.
+     - 
+6. Use the following command to view the project directory information:
+
+       brainsmith project info
+   
 
 

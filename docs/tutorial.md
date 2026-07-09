@@ -57,12 +57,13 @@ The quantized ONNX file is generated as a result of the compilation of the model
 
 4. Enable the environment using the command: "_**direnv allow**_".
 5. Define the model bluprint, model build and custom steps scripts.
-     - Use [this link()1](https://github.com/microsoft/brainsmith/blob/main/examples/blueprints/base.yaml) to view the basic blueprint file template and steps.
-     - Refer to [this link](https://github.com/Xilinx/finn/blob/main/src/finn/builder/build_dataflow_steps.py) to view the description of basic dataflow steps, mentioned under the blueprint;'s "**design_space**" section.
-     - 
+     - Use [this link(1)](https://github.com/microsoft/brainsmith/blob/main/examples/blueprints/base.yaml) to view the basic blueprint file template and steps.
+     - Refer to [this link(2)](https://github.com/Xilinx/finn/blob/main/src/finn/builder/build_dataflow_steps.py) to view the description of basic dataflow steps, to be stated under the blueprint's "**design_space**" section.
+     - Write the build and custom steps script using pytorch and the Brevitas and FINN libraries, which are used to define the custom steps in the latter python script.
 6. Use the following command to view the project directory information:
 
        brainsmith project info
+   
    
 
 

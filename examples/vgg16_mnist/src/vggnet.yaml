@@ -1,0 +1,72 @@
+name: "VGG16 Model"
+description: "VGG-16 MNIST based Model"
+
+# Configuration overrides
+clock_ns: 20.0
+output: "rtl"  # Default: generates estimates only, will be changed later to 'rtl' and then to 'bitfile'
+board: "V80" # instead of A Zynq-7000
+enable_build_pdb_debug: true
+
+finn_config:
+  # Quicktest-specific optimizations
+  target_fps: 5
+  folding_config_file: "/home/kirthanar/brainsmith_projects/vgg16_mnist/src/configs/folding_config.json"  # Quicktest-specific folding
+  fifosim_n_inferences: 2           # Speed up FIFO sizing
+  verbose: true
+  auto_fifo_depths: false
+  split_large_fifos: false
+    #auto_fifo_strategy: characterize
+
+# Direct override FINN configuration options
+design_space:
+  kernels:
+    - finn:MVAU
+    - finn:Thresholding
+    - DuplicateStreams
+    - ElementwiseBinaryOp
+    - LayerNorm
+    - Softmax
+    - ConvolutionInputGenerator
+    - finn:AddStreams
+    - StreamingDataWidthConverter
+    - finn:Pool
+    - finn:GlobalAccPool
+    - finn:LabelSelect
+
+  steps:
+    # Preprocessing
+    - "pre-input clean"
+    - "qonnx_to_finn"
+    - "post_qonnx_to_finn"
+      #    - "normalize_dataflow_layouts"
+    - "pre-streamline"
+    - "vgg16_streamline"
+    - "post-streamline"
+    - "vgg16_clean_transposes_before_hw"
+      # Kernel inferencing
+    - "transpose_decomposition"
+    - "vgg16_clean_transposes_before_hw"
+    - "vgg16_infer_hw_layers"
+    - "convert_optional_hw_layers"
+    - "post_convert_to_hw_check"
+    - "build_dataflow_graph"    # Infers and builds kernel graph (so no 'infer_kernels' to be mentioned seperately)
+ 
+    - "create_dataflow_partition"
+    - "post_dataflow_partition_check"
+    - "specialize_layers"
+    - "build_hw_graph"           # Partitions and specializes backend, DSE generation and parallelization 
+    - "vgg16_specialize_remaining_hw_layers"
+    - "target_fps_parallelization" # brainsmith :
+    - "apply_parallelization_config"
+    - "apply_folding_config"
+    - "minimize_bit_width"
+    - "generate_estimate_reports" 
+      # Now after successfully generating the DSE for the encoder part of T5_small model, we try to execute the steps
+      # starting from 'hw_codegen' to 'measure_rtlsim_performance'
+      # HLS/RTL Generation
+    - "hw_codegen"
+    - "hw_ipgen"
+    - "set_fifo_depths"
+    - "create_stitched_ip"
+    - "measure_rtlsim_performance"
+

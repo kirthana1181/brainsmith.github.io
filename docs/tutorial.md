@@ -69,7 +69,7 @@ The quantized ONNX file is generated as a result of the compilation of the model
            from brainsmith.registry import has_step
      -  This replaces the need to explicitly run the brainsmith compile command using 'smith':
 
-            smith dfc <cleaned-up_onnx_file> <blueprint_file> <optional-arguements>
+            smith dfc <cleaned-up_onnx_file> <blueprint_file> <optional-arguments>
         where the optional arguements could possibly be:
         
           | Option	| Type	| Default	| Description |
@@ -77,6 +77,7 @@ The quantized ONNX file is generated as a result of the compilation of the model
           |-o,--output-dir |	Path	| build/{timestamp} |	Output directory for generated files |
           |--start-step	| Text | -| Override blueprint | start_step (start execution from this step, inclusive) |
           --stop-step	| Text |	-|	Override blueprint | stop_step (stop execution at this step, inclusive |
+     
             
 6. Use the following command to view the project directory information:
 

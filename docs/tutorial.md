@@ -1,6 +1,9 @@
 # Tutorials
 
 Refer to the examples and the requirements to execute the build flow.
+The basic build flow is as shown:
+
+    PyTorch → ONNX → Hardware Kernels → HLS/RTL → IP Cores → Bitfile
 
 # Build Pre-requisites
 
@@ -64,6 +67,17 @@ The quantized ONNX file is generated as a result of the compilation of the model
 
            from brainsmith.dse.api import explore_design_space
            from brainsmith.registry import has_step
+     -  This replaces the need to explicitly run the brainsmith compile command using 'smith':
+
+            smith dfc <cleaned-up_onnx_file> <blueprint_file> <optional-arguements>
+        where the optional arguements could possibly be:
+        
+          | Option	| Type	| Default	| Description |
+          |-------|-------|-------|-------|
+          |-o,--output-dir |	Path	| build/{timestamp} |	Output directory for generated files |
+          |--start-step	| Text | -| Override blueprint | start_step (start execution from this step, inclusive) |
+          --stop-step	| Text |	-|	Override blueprint | stop_step (stop execution at this step, inclusive |
+            
 6. Use the following command to view the project directory information:
 
        brainsmith project info

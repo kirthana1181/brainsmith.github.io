@@ -15,12 +15,12 @@ The BERT example shows how to:
 
 Run a minimal 1-layer BERT test:
 ```bash
-./smithy ./examples/bert/quicktest.sh
+python bert_demo.py --blueprint bert_quicktest.yaml -o bert_demo_output  -l 1 
 ```
 
 ## Prerequisites
 
-- Brainsmith development environment (via `smithy` container)
+- Brainsmith development environment (via `smithy` container) (In our case, here we did not have smithy installed, so python works!)
 - Xilinx Vivado 2024.2 (for bitfile generation)
 
 ## Usage
@@ -33,19 +33,24 @@ Run a minimal 1-layer BERT test:
 ### Custom Model Configuration
 ```bash
 # Small BERT with 4-bit quantization
-./smithy python ./examples/bert/bert_demo.py \
-    -o bert_small \
-    -z 256 \
-    -n 8 \
-    -l 4 \
-    -b 4
+python bert_demo.py \
+    --blueprint bert_quicktest.yaml \
+    -o bert_demo_output \
+    -l 1 \
+    -z 64 \
+    -n 4 \
+    -b 4 \
 
 # Larger model with custom blueprint
-./smithy python ./examples/bert/bert_demo.py \
-    -o bert_large \
-    -z 768 \
-    -n 12 \
-    -l 12 \
+python bert_demo.py \
+    --blueprint bert_quicktest.yaml \
+    -o bert_demo_output \
+    -l 1 \
+    -z 64 \
+    -n 4 \
+    -i 768 \
+    -b 4 \
+    -q 32 \
     --blueprint bert_quicktest.yaml
 ```
 
@@ -102,10 +107,10 @@ Control hardware parallelism using `gen_folding_config.py`:
 
 ```bash
 # Generate custom folding config
-./smithy python ./examples/bert/gen_folding_config.py \
+python gen_folding_config.py \
     --pe 8 \
     --simd 8 \
-    --output my_folding.json
+    --output configs/my_folding.json
 ```
 
 Folding parameters determine the PE×SIMD parallelism for each layer, directly affecting resource usage and throughput.

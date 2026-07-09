@@ -2,7 +2,19 @@
 
 ## Model Features
 
+| Parameter          | Default_values | Signifies                                                          |
+| ------------------ | ------- | ----------------------------------------------------------------------------- |
+| `in_channels`      | `1`     | Number of input channels in the image.                                        |
+| `num_classes`      | `1000`    | Number of output classes the model predicts.                                  |
+| `act_bit_width`    | `8`     | Number of bits used to represent activation values during inference/training. |
 
+- This model is trained on the mnist datatset
+- The model accepts input images/vectors of dimensionality (1,3,224,224)
+- We may also mention the number of classes and the activation bit width along with the compile command with the syntax:
+
+      python model.py --blueprint vggnet.yaml --output <output_file_path> --num-classes <value> --bit-width <value>
+- The default location where the onnx files generated as a result of the execution of the VGG16 and the other examples are with the file path: ._/onnx/<model>_raw.onnx_ and _./onnx/<model>_clean.onnx_ which could also be altered while writing the compile command with "--raw-onnx" and "--clean-onnx" as the optional command line arguements.
+- All the customisations required could be performed upon the model.py script which is used to build our model.
 
 ## Custom steps defined:
 

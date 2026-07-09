@@ -38,7 +38,7 @@ The build script we saved in the case of our examples is named as _model.py_ , a
 
 # 3. ONNX file
 
-The quantized ONNX file is generated as a result of the compilation of the model import/build script, which is constructed using QONNX and Brevitas libraeies. Both the origin and cleaned up ONNX graphs are generated using this build script, with the help of transformations from the custom_steps script.
+The quantized ONNX file is generated as a result of the compilation of the model import/build script, which is constructed using QONNX and Brevitas libraries. Both the origin and cleaned up ONNX graphs are generated using this build script, with the help of transformations from the custom_steps script.
 
 ## Steps to compile and create the streaming dataflow accelerator in Brainsmith:
 
@@ -60,6 +60,10 @@ The quantized ONNX file is generated as a result of the compilation of the model
      - Use [this link(1)](https://github.com/microsoft/brainsmith/blob/main/examples/blueprints/base.yaml) to view the basic blueprint file template and steps.
      - Refer to [this link(2)](https://github.com/Xilinx/finn/blob/main/src/finn/builder/build_dataflow_steps.py) to view the description of basic dataflow steps, to be stated under the blueprint's "**design_space**" section.
      - Write the build and custom steps script using pytorch and the Brevitas and FINN libraries, which are used to define the custom steps in the latter python script.
+     - Both the origin and cleanup ONNX files should be generated as result of the compilation of the model build script. Optionally we may include the build flow, using the brainsmith registry and dse libraries.
+
+           from brainsmith.dse.api import explore_design_space
+           from brainsmith.registry import has_step
 6. Use the following command to view the project directory information:
 
        brainsmith project info

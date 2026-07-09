@@ -44,8 +44,8 @@ Refer to this [github file](https://github.com/microsoft/brainsmith/blob/6b1e9ef
    The reports generated depend on the type of final output ('estimates', 'rtl' or 'bitfile')
 
 - **`estimate_layer_config_alternatives.json`** - Alternative hardware configurations for each layer
-- **`estimate_layer_cycles.json`** - Estimated clock cycles required per layer
-- **`estimate_layer_resources.json`** - FPGA resource utilization estimates (DSP, BRAM, LUT)
-- **`estimate_network_performance.json`** - Overall network performance metrics
-- **`op_and_param_counts.json`** - Operation and parameter statistics
-- **`rtlsim_performance.json`** - RTL simulation performance results
+- **`estimate_layer_cycles.json`** - Represents the number of cycles taken by each of the output ONNX nodes (i.e. each layer)
+- **`estimate_layer_resources.json`** - Represents the amount of HW resources required specific to the output ONNX nodes, within the target FPGA resource​ estimates
+- **`estimate_network_performance.json`** - Summarizes the estimated end-to-end performance, highlighting performance metrics
+- **`op_and_param_counts.json`** - MAC operation and number of weight parameters statistics specific to each ONNX node
+- **`rtlsim_performance.json`** - RTL simulation performance results, generated as a result of the step ‘measure_rtl_sim_performance’

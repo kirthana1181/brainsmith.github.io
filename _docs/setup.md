@@ -1,6 +1,5 @@
 ---
 title: Setup
-layout: default
 ---
 
 [Setup]({{brainsmith.github.io}}/index/)

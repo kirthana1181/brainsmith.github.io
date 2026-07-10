@@ -1,13 +1,9 @@
 ---
 layout: default
-title: Brainsmith
+title: Tutorials
 ---
 
 [Home]('docs/index.md') | [Setup]('docs/setup.md') | [Tutorial]('docs/tutorial.md') | [CLI]('docs/usage.md')
-
----
-
-# Tutorials
 
 ---
 

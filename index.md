@@ -3,11 +3,11 @@ title: Home
 layout: default
 ---
 
-[Setup]({{brainsmith.github.io}}/docs/setup/)
+[Setup]({{/docs/setup/brainsmith.github.io}})
 |
-[Tutorial]({{brainsmith.github.io}}/docs/tutorial/)
+[Tutorial]({{/docs/tutorial/brainsmith.github.io}})
 |
-[CLI]({{brainsmith.github.io}}/docs/usage/)
+[CLI]({{{/docs/usage/brainsmith.github.io}})
 
 ---
 
@@ -48,7 +48,7 @@ Brainsmith is nothing but a tool stitched out of these open-source tools: Brevit
 
 ### [Getting Started](/docs/usage)
 
-## Quick Links
-- [Start Building]({{brainsmith.github.io}}/_docs/setup) 
-- [Tutorial]({{brainsmith.github.io}}/_docs/tutorial)
-- [CLI]({{brainsmith.github.io}}/_docs/usage)
+<!--## Quick Links-->
+<!-- - [Start Building]({{/docs/setup/brainsmith.github.io}}) 
+- [Tutorial]({{/docs/setup/brainsmith.github.io}})
+- [CLI]({{/docs/setup/brainsmith.github.io}}) -->

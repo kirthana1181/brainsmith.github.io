@@ -25,5 +25,9 @@
 | `lenet_specialize_remaining_hw_layers` | Inserted after `build_hw_graph`; converts any remaining generic FINN nodes such as `FMPadding` and `ConvolutionInputGenerator`, as in our graph, into `fpgadataflow` nodes. |
 | `lenet_pre_partition_cleanup`          | Removes ordinary `Transpose`/`Reshape` nodes trapped between FINN hardware nodes.                                                                                           |
 
+## Results
+
+As a result of the implementation, we conducted experiments over the LeNet-5 Model to confirm the trends in PE and SIMD scaling factors vs. latency cyles and Hardware resources.
+
 
 _Refer to this [github repository link](https://github.com/kirthana1181/LeNet-5-using-Brainsmith.git) to understand the LeNet-5 implementation._

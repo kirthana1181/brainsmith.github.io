@@ -1,7 +1,14 @@
 ---
 layout: default
-title: Brainsmith
+title: Home
 ---
+
+[Setup]({% link docs/setup.md %}) | [Tutorial]({% link docs/tutorial.md %}) | [Usage]({% link docs/usage.md %})
+
+---
+
+# Setup
+...
 
 # Brainsmith
 

@@ -1,5 +1,5 @@
 ---
-title: CLI
+title: Setup
 layout: default
 ---
 

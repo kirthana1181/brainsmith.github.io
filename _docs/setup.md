@@ -4,7 +4,7 @@ title: Setup
 layout: default
 ---
 
-[Home]({{ base_url | url }})
+[Home]({{ base_url | relative_url }})
 |
 [Tutorial]({{ "/docs/tutorial/" | relative_url }})
 |

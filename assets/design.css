@@ -29,11 +29,11 @@ body {
     min-height: 100vh;
 } */
 
-.container {
+/* .container {
     width: 95%;
     max-width: 1600px;
     margin: 0 auto;
-}
+} */
 
 /* Header Styles */
 .site-header {
@@ -272,7 +272,7 @@ a:hover {
     }
 }
 
-/* @import "{{ site.theme }}";
+@import "{{ site.theme }}";
 
 .wrapper {
     width: 1400px;
@@ -285,4 +285,4 @@ section {
 
 header {
     width: 380px;
-} */
+}

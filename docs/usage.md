@@ -8,7 +8,9 @@ title: Brainsmith
 ---
 
 # CLI
-...
+
+---
+
 # Basic Commands to run the Brainsmith Compiler
 
 `smith` - Streamlined CLI for creating dataflow accelerators

@@ -1,4 +1,14 @@
+---
+layout: default
+title: Brainsmith
+---
+
+[Home](docs/index.md) | [Setup](docs/setup.md) | [Tutorial](docs/tutorial.md) | [Usage](docs/usage.md)
+
+---
+
 # Tutorials
+...
 
 Refer to the examples and the requirements to execute the build flow.
 The basic build flow is as shown:

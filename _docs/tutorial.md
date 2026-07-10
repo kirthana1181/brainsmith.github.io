@@ -12,7 +12,7 @@ layout: default
 
 ---
 
-Refer to the examples and the requirements to execute the build flow.
+Refer to the [examples]({{ "examples" | relative_url }}) and the requirements to execute the build flow.
 The basic build flow is as shown:
 
     PyTorch → ONNX → Hardware Kernels → HLS/RTL → IP Cores → Bitfile

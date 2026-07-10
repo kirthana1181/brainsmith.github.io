@@ -1,3 +1,14 @@
+---
+layout: default
+title: Brainsmith
+---
+
+[Home](docs/index.md) | [Setup](docs/setup.md) | [Tutorial](docs/tutorial.md) | [CLI](docs/usage.md)
+
+---
+
+# CLI
+...
 # Basic Commands to run the Brainsmith Compiler
 
 `smith` - Streamlined CLI for creating dataflow accelerators

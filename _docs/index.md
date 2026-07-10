@@ -1,8 +1,13 @@
 ---
+title: Home
 layout: default
 ---
 
-[Setup](/docs/setup.html) | [Tutorial](/docs/tutorial.html) | [CLI](/docs/usage.html)
+[Setup]({{brainsmith.github.io}}/docs/setup/)
+|
+[Tutorial]({{brainsmith.github.io}}/docs/tutorial/)
+|
+[CLI]({{brainsmith.github.io}}/docs/usage/)
 
 ---
 

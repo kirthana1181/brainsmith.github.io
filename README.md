@@ -1,6 +1,6 @@
 Brainsmith is an open-source project by Microsoft and AMD that transforms ONNX neural networks into optimized dataflow accelerators for FPGAs through automated design space exploration, making FPGA acceleration accessible without deep hardware expertise, and is composed of 3 foundational open-source tools in the order: Brevitas, QONNX and the FINN Compiler.
 
-This repository aims at understanding the use of Brainsmith and its automated accelerator design.
+This repository aims at understanding the use of Brainsmith and producing its automated accelerator design flow.
 
 # References
 

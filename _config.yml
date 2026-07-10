@@ -14,5 +14,11 @@ highlighter: rouge
 collections:
   docs:
     output: true
-    permalink: /:collection/:path/
+    permalink: /docs/:name/
 
+defaults:
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: default

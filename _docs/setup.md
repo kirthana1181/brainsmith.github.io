@@ -4,8 +4,6 @@ title: Setup
 layout: default
 ---
 
-[Home]({{ base_url | relative_url }})
-|
 [Tutorial]({{ "/docs/tutorial/" | relative_url }})
 |
 [CLI]({{ "/docs/usage/" | relative_url }})

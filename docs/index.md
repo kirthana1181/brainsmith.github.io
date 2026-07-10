@@ -8,7 +8,8 @@ title: Brainsmith
 ---
 
 # Home
-...
+
+---
 
 Brainsmith is a compiler created by AMD and Microsoft. It transforms ONNX models of neural networks, using automated design space exploration, into optimized streaming dataflow accelerators for deploying onto FPGAs for neral network inference. In this repository, we aimed to generate RTL design and the final stitched version of the LeNet-5 Model.
 

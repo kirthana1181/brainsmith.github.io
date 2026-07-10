@@ -3,7 +3,7 @@ title: Setup
 layout: default
 ---
 
-[Setup]({{brainsmith.github.io}}/docs/setup/)
+[Setup]({{brainsmith.github.io}}/index/)
 |
 [Tutorial]({{brainsmith.github.io}}/docs/tutorial/)
 |

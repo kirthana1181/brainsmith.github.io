@@ -20,7 +20,7 @@ Key stages in generating the final output include:
 - IP packaging: Creating Vivado IP Cores
 - Simulation: Verifying correctness with RTL simulation in Vivado (of RTL file/bitfile)
 
-Key features:
+**Key features:**
 
 **Automated Design** - Handles kernel selection and IP generation  
 **Optimized Performance** - FIFO sizing and parallelization  

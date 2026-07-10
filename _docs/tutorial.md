@@ -3,7 +3,13 @@ layout: default
 title: Tutorials
 ---
 
-[Home]('docs/index.md') | [Setup]('docs/setup.md') | [Tutorial]('docs/tutorial.md') | [CLI]('docs/usage.md')
+
+[Setup]({{brainsmith.github.io}}/docs/setup/)
+|
+[Home]({{brainsmith.github.io}}/index/)
+|
+[CLI]({{brainsmith.github.io}}/docs/usage/)
+
 
 ---
 

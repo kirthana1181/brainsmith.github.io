@@ -6,8 +6,6 @@ layout: default
 [Setup]({{ "/docs/setup/" | relative_url }}) 
 | 
 [Tutorial]({{ "/docs/tutorial/" | relative_url }})
-|
-[Home]({{ base_url | relative_url }})
 
 ---
 

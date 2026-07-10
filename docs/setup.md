@@ -1,7 +1,14 @@
 ---
 layout: default
-title: Installation
+title: Setup
 ---
+
+[Home]({% link docs/index.md %}) | [Setup]({% link docs/setup.md %}) | [Tutorial]({% link docs/tutorial.md %}) | [Usage]({% link docs/usage.md %})
+
+---
+
+# Setup
+...
 
 # Steps to install Brainsmith
 

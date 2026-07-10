@@ -62,6 +62,6 @@ There were many dependency issues faced at the time of the compiler installation
    And check the installation status again using the same verification command. Following this, we've run the shell setup script once gain.
    The below images, are a result of the second installation method.
 
-   <img width="721" height="403" alt="image" src="https://github.com/user-attachments/assets/755ba493-4c4f-42ee-9d20-c82da1755b03" />
+   <img width="621" height="303" alt="image" src="https://github.com/user-attachments/assets/755ba493-4c4f-42ee-9d20-c82da1755b03" />
 
-   <img width="773" height="436" alt="image" src="https://github.com/user-attachments/assets/c65a6b2d-dfc7-4590-a62e-949a07242187" />
+   <img width="621" height="336" alt="image" src="https://github.com/user-attachments/assets/c65a6b2d-dfc7-4590-a62e-949a07242187" />

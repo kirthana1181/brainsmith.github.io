@@ -6,7 +6,7 @@ layout: default
 
 [Setup]({{brainsmith.github.io}}/docs/setup/)
 |
-[Home]({{brainsmith.github.io}}/index/)
+[Home]({{ base_url | url }})
 |
 [CLI]({{brainsmith.github.io}}/docs/usage/)
 

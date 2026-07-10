@@ -3,11 +3,11 @@ title: Brainsmith
 layout: default
 ---
 
-[Setup]({{brainsmith.github.io}}/docs/setup/)
+[Setup]({{ "/docs/setup/" | relative_url }}) 
+| 
+[Tutorial]({{ "/docs/tutorial/" | relative_url }})
 |
-[Tutorial]({{brainsmith.github.io}}/docs/tutorial/)
-|
-[Home]({{brainsmith.github.io}}/index/)
+[Home]({{ base_url | relative_url }})
 
 ---
 

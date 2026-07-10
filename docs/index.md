@@ -3,7 +3,7 @@ layout: default
 title: Brainsmith
 ---
 
-[Setup]({% link docs/setup.md %}) | [Tutorial]({% link docs/tutorial.md %}) | [Usage]({% link docs/usage.md %})
+[Setup](docs/setup.md) | [Tutorial](docs/tutorial.md) | [Usage](docs/usage.md)
 
 ---
 

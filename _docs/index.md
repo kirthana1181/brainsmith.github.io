@@ -2,7 +2,7 @@
 layout: default
 ---
 
-[Setup](docs/setup.html) | [Tutorial](docs/tutorial.html) | [CLI](docs/usage.html)
+[Setup](/docs/setup.html) | [Tutorial](/docs/tutorial.html) | [CLI](/docs/usage.html)
 
 ---
 

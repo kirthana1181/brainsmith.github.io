@@ -7,7 +7,7 @@ title: Brainsmith
 |
 [Tutorial]({{brainsmith.github.io}}/docs/tutorial/)
 |
-[CLI]({{brainsmith.github.io}}/docs/usage/)
+[Home]({{brainsmith.github.io}}/index/)
 
 ---
 

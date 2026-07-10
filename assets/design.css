@@ -265,3 +265,18 @@ a:hover {
         padding: 1rem;
     }
 }
+
+@import "{{ site.theme }}";
+
+.wrapper {
+    width: 1400px;
+    max-width: 95%;
+}
+
+section {
+    width: 900px;
+}
+
+header {
+    width: 380px;
+}

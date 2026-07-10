@@ -1,6 +1,6 @@
-site.title: Brainsmith
-site.description: Automated FPGA Dataflow Accelerator Generation
-site.url: https://kirthana1181.github.io/brainsmith.github.io
+title: Brainsmith
+description: Automated FPGA Dataflow Accelerator Generation
+url: https://kirthana1181.github.io/brainsmith.github.io
 
 # Theme
 theme: jekyll-theme-minimal  # or another Jekyll theme you prefer
@@ -26,9 +26,9 @@ header_pages:
 ├── _docs/                   # Documentation collection
 │   ├── index.md
 │   ├── setup.md
-│   └── usage.md
-├── _posts/                  # Blog posts (optional)
+|   ├── tutorial.md
+│   └── usage.md                 
 ├── assets/                  # Images, CSS, etc.
-│   ├── css/
+│   ├── design.css
 │   └── images/
 └── README.md

@@ -49,6 +49,6 @@ Brainsmith is nothing but a tool stitched out of these open-source tools: Brevit
 ### [Getting Started](/docs/usage)
 
 ## Quick Links
-- [Start Building]('/docs/setup') 
-- [Tutorial]('/docs/tutorial')
-- [CLI]('/docs/usage')
+- [Start Building]({{brainsmith.github.io}}/docs/setup) 
+- [Tutorial]({{brainsmith.github.io}}/docs/tutorial)
+- [CLI]({{brainsmith.github.io}}/docs/usage)

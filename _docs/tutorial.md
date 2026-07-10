@@ -5,8 +5,6 @@ layout: default
 
 [Setup]({{ "/docs/setup/" | relative_url }})
 |
-[Home]({{ base_url | relative_url }})
-|
 [CLI]({{ "/docs/usage/" | relative_url }})
 
 

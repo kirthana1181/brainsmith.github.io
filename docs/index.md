@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Brainsmith
 ---
 
-[Setup](https://github.com/kirthana1181/brainsmith.github.io/blob/main/docs/setup.md) | [Tutorial](https://github.com/kirthana1181/brainsmith.github.io/blob/main/docs/tutorial.md) | [CLI](https://github.com/kirthana1181/brainsmith.github.io/blob/main/docs/usage.md)
+[Setup](docs/setup.html) | [Tutorial](docs/tutorial.html) | [CLI](docs/usage.html)
 
 ---
 

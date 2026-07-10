@@ -272,7 +272,7 @@ a:hover {
     }
 }
 
-@import "{{ site.theme }}";
+/* @import "{{ site.theme }}";
 
 .wrapper {
     width: 1400px;
@@ -285,4 +285,4 @@ section {
 
 header {
     width: 380px;
-}
+} */

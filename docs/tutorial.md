@@ -8,7 +8,8 @@ title: Brainsmith
 ---
 
 # Tutorials
-...
+
+---
 
 Refer to the examples and the requirements to execute the build flow.
 The basic build flow is as shown:

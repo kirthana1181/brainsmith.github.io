@@ -1,6 +1,6 @@
 ---
-layout: default
 title: Brainsmith
+layout: default
 ---
 
 [Setup]({{brainsmith.github.io}}/docs/setup/)

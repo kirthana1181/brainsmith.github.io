@@ -8,7 +8,8 @@ title: Brainsmith
 ---
 
 # Setup
-...
+
+---
 
 # Steps to install Brainsmith
 

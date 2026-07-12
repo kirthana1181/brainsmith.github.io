@@ -54,7 +54,10 @@ There were many dependency issues faced at the time of the compiler installation
    And check the installation status again using the same verification command. Following this, we've run the shell setup script once gain.
    The below images, are a result of the second installation method.
 
+
 ![Architecture diagram](/assets/images/Screenshot(1).png)
+
+
 
 ![Architecture diagram](/assets/images/Screenshot(2).png)
 

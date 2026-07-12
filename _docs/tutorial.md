@@ -3,13 +3,6 @@ title: Tutorials
 layout: default
 ---
 
-[Setup]({{ "/docs/setup/" | relative_url }})
-|
-[CLI]({{ "/docs/usage/" | relative_url }})
-
-
----
-
 Refer to the [examples](https://github.com/kirthana1181/brainsmith.github.io/tree/main/examples) and the requirements to execute the build flow.
 The basic build flow is as shown:
 
@@ -93,6 +86,13 @@ The quantized ONNX file is generated as a result of the compilation of the model
 
        brainsmith project info
    
-   
+
+---
+
+[Setup]({{ "/docs/setup/" | relative_url }})
+|
+[CLI]({{ "/docs/usage/" | relative_url }})
+
+---
 
 

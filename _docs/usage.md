@@ -3,12 +3,6 @@ title: Brainsmith
 layout: default
 ---
 
-[Setup]({{ "/docs/setup/" | relative_url }}) 
-| 
-[Tutorial]({{ "/docs/tutorial/" | relative_url }})
-
----
-
 # Basic Commands to run the Brainsmith Compiler
 
 `smith` - Streamlined CLI for creating dataflow accelerators
@@ -60,3 +54,10 @@ Refer to this [github file](https://github.com/microsoft/brainsmith/blob/6b1e9ef
 - **`estimate_network_performance.json`** - Summarizes the estimated end-to-end performance, highlighting performance metrics
 - **`op_and_param_counts.json`** - MAC operation and number of weight parameters statistics specific to each ONNX node
 - **`rtlsim_performance.json`** - RTL simulation performance results, generated as a result of the step ‘measure_rtl_sim_performance’
+
+---
+[Setup]({{ "/docs/setup/" | relative_url }}) 
+| 
+[Tutorial]({{ "/docs/tutorial/" | relative_url }})
+
+---

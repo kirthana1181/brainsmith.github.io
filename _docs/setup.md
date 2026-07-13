@@ -55,14 +55,13 @@ There were many dependency issues faced at the time of the compiler installation
    The below images, are a result of the second installation method.
 
 
-![Architecture diagram](/assets/images/Screenshot(1).png)
+![Successful FINN installation messsage](/assets/images/Screenshot(1).png)
 
 
 
-![Architecture diagram](/assets/images/Screenshot(2).png)
+![Successful Brainsmith Installation message](/assets/images/Screenshot(2).png)
 
 
----
 [Tutorial]({{ "/docs/tutorial/" | relative_url }})
 |
 [CLI]({{ "/docs/usage/" | relative_url }})

@@ -4,6 +4,12 @@ title: Setup
 layout: default
 ---
 
+[Tutorial]({{ "/docs/tutorial/" | relative_url }})
+|
+[CLI]({{ "/docs/usage/" | relative_url }})
+
+---
+
 # Steps to install Brainsmith
 
 There were many dependency issues faced at the time of the compiler installation due to deprecated libraries and modules or dependency onto older versions of the python libraries and missing dependencies.
@@ -60,10 +66,3 @@ There were many dependency issues faced at the time of the compiler installation
 
 
 ![Successful Brainsmith Installation message](/assets/images/Screenshot(2).png)
-
-
-[Tutorial]({{ "/docs/tutorial/" | relative_url }})
-|
-[CLI]({{ "/docs/usage/" | relative_url }})
-
----

@@ -1,3 +1,14 @@
+---
+---
+@import "{{ site.theme }}";
+
+header {
+  width: 200px;
+}
+section {
+  margin-left: 220px;
+}
+
 /* General Styles */
 :root {
     --primary-color: #0366d6;
@@ -306,7 +317,7 @@ figure.content-figure figcaption {
 }
 .image-grid img {
     width: 100%;
-    height: 200px;
+    height: 500px; /*here*/
     object-fit: cover;
 }
 

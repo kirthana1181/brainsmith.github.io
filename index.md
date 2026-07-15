@@ -46,6 +46,8 @@ Brainsmith is nothing but a tool stitched out of these open-source tools: Brevit
 4. Tweak your QNN topology, quantization setup and build_dataflow parameters to obtain the desired outcome.
 5. Define and state the build dataflow steps as per the neural network required to be deployed, using [FINN and QONNX](https://finn.readthedocs.io/en/latest/source_code/finn.transformation.html) transformations, and execute the compiler command to build the streaming dataflow accelerator.
 
+---
+
 ### [Getting Started]({{ "/docs/usage/" | relative_url }})
 
 <!--## Quick Links-->

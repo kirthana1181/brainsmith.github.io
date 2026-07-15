@@ -41,4 +41,25 @@ Throughput vs. Resources(PE)
 ![Throughput vs. Resources(SIMD)](/assets/images/Throughput_vs_Resources(SIMD).png)
 Throughput vs. Resources(SIMD)
 
+RTL Simulation Performance Results at 200MHz:
+
+```json
+  {
+  "N_IN_TXNS": 784,
+  "N_OUT_TXNS": 10,
+  "cycles": 128319,
+  "N": 1,
+  "latency_cycles": 128318,
+  "interval_cycles": 128308,
+  "TIMEOUT": 0,
+  "UNFINISHED_INS": 0,
+  "UNFINISHED_OUTS": 0,
+  "RUNTIME_S": 6,
+  "runtime[ms]": 0.641595,
+  "throughput[images/s]": 1558.615637590692,
+  "fclk[mhz]": 200.0,
+  "stable_throughput[images/s]": 1558.615637590692
+}
+```
+
 _Refer to this [github repository link](https://github.com/kirthana1181/LeNet-5-using-Brainsmith.git) to understand the LeNet-5 implementation._

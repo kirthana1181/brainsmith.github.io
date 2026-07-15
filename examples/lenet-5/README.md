@@ -29,5 +29,12 @@
 
 As a result of the implementation, we conducted experiments over the LeNet-5 Model to confirm the trends in PE and SIMD scaling factors vs. latency cyles and Hardware resources.
 
+![Latency Cycles vs. Resources(PE)](/assets/images/LatencyCycles_vs_Resources(PE).png){: .}
+
+![Latency Cycles vs. Resources(SIMD)](/assets/images/LatencyCycles_vs_Resources(SIMD).png){: .}
+
+![Throughput vs. Resources(PE)](/assets/images/Throughput_vs_Resources(PE).png){: .}
+
+![Throughput vs. Resources(PE)](/assets/images/Throughput_vs_Resources(SIMD).png){: .}
 
 _Refer to this [github repository link](https://github.com/kirthana1181/LeNet-5-using-Brainsmith.git) to understand the LeNet-5 implementation._

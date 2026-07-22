@@ -17,3 +17,4 @@ Network Inference](https://arxiv.org/pdf/1612.07119)
 10. [FINN Examples](https://github.com/Xilinx/finn-examples)
 11. [Understanding Neural Network Co-Design using FINN](https://youtu.be/zw2aG4PhzmA?si=G-u683mlxvtzZco9) by AMD
 12. [Understanding fundamental construts of Brainsmith](https://github.com/microsoft/brainsmith/tree/6b1e9ef1bee0ce63561d32ccbf16b33ae2cdff80/docs/developer-guide/experimental)
+13. [Understanding FINN](https://finn-dev.readthedocs.io/_/downloads/en/latest/pdf/)

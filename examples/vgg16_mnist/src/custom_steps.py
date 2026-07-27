@@ -156,7 +156,7 @@ def _assert_no_ops(model: ModelWrapper, forbidden_ops, stage_name: str):
         )
 
 
-def _assert_no_residual_like_adds(model: ModelWrapper, stage_name: str):
+def _assert_no_adds(model: ModelWrapper, stage_name: str):
     """
     Reject ResNet-style skip/residual Add nodes.
 
@@ -234,7 +234,7 @@ def step_vgg16_pre_qonnx_to_finn_clean(model: ModelWrapper, cfg: DataflowBuildCo
     ]:
         model = model.transform(trn)
 
-    _assert_no_residual_like_adds(model, "pre-input clean")
+    _assert_no_adds(model, "pre-input clean")
     return _save_and_check(model, cfg, "00_pre_input_clean")
 
 
@@ -255,7 +255,7 @@ def step_vgg16_post_qonnx_to_finn_check(model: ModelWrapper, cfg: DataflowBuildC
         ["Quant", "Trunc", "BinaryQuant"],
         "step_qonnx_to_finn",
     )
-    _assert_no_residual_like_adds(model, "step_qonnx_to_finn")
+    _assert_no_adds(model, "step_qonnx_to_finn")
 
     return _save_and_check(model, cfg, "01_post_qonnx_to_finn")
 
@@ -284,7 +284,7 @@ def step_vgg16_pre_streamline(model: ModelWrapper, cfg: DataflowBuildConfig):
     ]:
         model = model.transform(trn)
 
-    _assert_no_residual_like_adds(model, "pre-streamline")
+    _assert_no_adds(model, "pre-streamline")
     return _save_and_check(model, cfg, "02_pre_streamline")
 
 
@@ -326,7 +326,7 @@ def step_vgg16_post_streamline_check(model: ModelWrapper, cfg: DataflowBuildConf
     ]:
         model = model.transform(trn)
 
-    _assert_no_residual_like_adds(model, "post-streamline")
+    _assert_no_adds(model, "post-streamline")
     return _save_and_check(model, cfg, "03_post_streamline")
 
 
@@ -343,7 +343,7 @@ def step_vgg16_post_convert_to_hw_check(model: ModelWrapper, cfg: DataflowBuildC
     model = _tidy(model)
 
     _assert_no_ops(model, ["Conv", "Gemm"], "step_convert_to_hw")
-    _assert_no_residual_like_adds(model, "post_convert_to_hw_check")
+    _assert_no_adds(model, "post_convert_to_hw_check")
 
     return _save_and_check(model, cfg, "04_post_convert_to_hw_check")
 
@@ -384,7 +384,7 @@ def step_vgg16_convert_optional_final_layers(model: ModelWrapper, cfg: DataflowB
     ]:
         model = model.transform(trn)
 
-    _assert_no_residual_like_adds(model, "convert_optional_hw_layers")
+    _assert_no_adds(model, "convert_optional_hw_layers")
 
     def is_fpgadataflow_node(node):
         backend = get_by_name(node.attribute, "backend")
@@ -428,7 +428,7 @@ def step_vgg16_post_dataflow_partition_check(model: ModelWrapper, cfg: DataflowB
                 f"found {sdp_count}."
             )
 
-        _assert_no_residual_like_adds(parent_model, "dataflow parent partition")
+        _assert_no_adds(parent_model, "dataflow parent partition")
         _save_and_check(parent_model, cfg, "06_post_dataflow_partition_parent")
     else:
         sdp_count = _count_ops(model, "StreamingDataflowPartition")
@@ -439,7 +439,7 @@ def step_vgg16_post_dataflow_partition_check(model: ModelWrapper, cfg: DataflowB
                 f"found {sdp_count}."
             )
 
-    _assert_no_residual_like_adds(model, "post_dataflow_partition_check_child")
+    _assert_no_adds(model, "post_dataflow_partition_check_child")
     return _save_and_check(model, cfg, "07_post_dataflow_partition_child")
 
 
@@ -464,7 +464,7 @@ def vgg16_manual_streamline_step(model: ModelWrapper, cfg: DataflowBuildConfig):
     ]:
         model = model.transform(trn)
 
-    _assert_no_residual_like_adds(model, "vgg16_manual_streamline")
+    _assert_no_adds(model, "vgg16_manual_streamline")
     return _save_and_check(model, cfg, "manual_streamline")
 
 
@@ -509,7 +509,7 @@ def vgg16_clean_transposes_before_hw_step(model: ModelWrapper, cfg: DataflowBuil
     model = _tidy(model)
 
     _print_transposes(model, "after cleanup")
-    _assert_no_residual_like_adds(model, "vgg16_clean_transposes_before_hw")
+    _assert_no_adds(model, "vgg16_clean_transposes_before_hw")
 
     return _save_and_check(model, cfg, "manual_clean_transposes_before_hw")
 
@@ -552,7 +552,7 @@ def vgg16_manual_infer_hw_layers_step(model: ModelWrapper, cfg: DataflowBuildCon
     ]:
         model = model.transform(trn)
 
-    _assert_no_residual_like_adds(model, "vgg16_manual_infer_hw_layers")
+    _assert_no_adds(model, "vgg16_manual_infer_hw_layers")
     return _save_and_check(model, cfg, "manual_infer_hw_layers")
 
 

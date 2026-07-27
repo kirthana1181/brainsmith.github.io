@@ -158,11 +158,8 @@ def _assert_no_ops(model: ModelWrapper, forbidden_ops, stage_name: str):
 
 def _assert_no_adds(model: ModelWrapper, stage_name: str):
     """
-    Reject ResNet-style skip/residual Add nodes.
-
     VGG16 should be a straight feed-forward CNN. Bias/scale Add nodes are allowed
-    when at least one input is an initializer. Residual-like Adds are those where
-    both inputs are dynamic activation tensors.
+    when at least one input is an initializer.
     """
     initializer_names = {x.name for x in model.graph.initializer}
     residual_candidates = []

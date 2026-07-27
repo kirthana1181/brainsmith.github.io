@@ -207,30 +207,6 @@ def _print_transposes(model: ModelWrapper, tag: str):
         print(f"  input: {list(node.input)}")
         print(f"  out  : {list(node.output)}")
 
-
-# -----------------------------------------------------------------------------
-# Brainsmith-registered VGG16 custom steps
-# -----------------------------------------------------------------------------
-#
-# These names must match:
-#   1. model.py assert_custom_steps_registered()
-#   2. vggnet.yaml step list
-#
-# Example YAML entries:
-#   - pre-input clean
-#   - step_qonnx_to_finn
-#   - post_qonnx_to_finn
-#   - step_tidy_up
-#   - pre-streamline
-#   - step_streamline
-#   - post-streamline
-#   - step_convert_to_hw
-#   - post_convert_to_hw_check
-#   - convert_optional_hw_layers
-#   - step_create_dataflow_partition
-#   - post_dataflow_partition_check
-# -----------------------------------------------------------------------------
-
 @step(name="pre-input clean")
 def step_vgg16_pre_qonnx_to_finn_clean(model: ModelWrapper, cfg: DataflowBuildConfig):
     """
@@ -349,23 +325,6 @@ def step_vgg16_post_streamline_check(model: ModelWrapper, cfg: DataflowBuildConf
         GiveReadableTensorNames(),
     ]:
         model = model.transform(trn)
-        #model = model.transform(to_hw.InferBinaryMatrixVectorActivation())
-        #model = model.transform(to_hw.InferQuantizedMatrixVectorActivation())
-        #model = model.transform(to_hw.InferThresholdingLayer())
-        #model = model.transform(to_hw.InferConvInpGen())
-
-        # converts pooling to streaming HW pool
-        #model = model.transform(to_hw.InferStreamingMaxPool())
-
-        # removes conv-to-FC Flatten/Reshape between HW nodes
-        #model = model.transform(RemoveCNVtoFCFlatten())
-        #model = model.transform(absorb.AbsorbConsecutiveTransposes())
-
-        #model = model.transform(InferShapes())
-        #model = model.transform(InferDataTypes())
-        #model = model.transform(RemoveUnusedTensors())
-        #model = model.transform(SortGraph())
-        #model = model.transform(GiveUniqueNodeNames())
 
     _assert_no_residual_like_adds(model, "post-streamline")
     return _save_and_check(model, cfg, "03_post_streamline")
@@ -413,7 +372,6 @@ def step_vgg16_convert_optional_final_layers(model: ModelWrapper, cfg: DataflowB
         
         to_hw.InferChannelwiseLinearLayer(),
         to_hw.InferLabelSelectLayer(),
-        
         
         AbsorbConsecutiveTransposes(),
         InferShapes(),
@@ -488,9 +446,6 @@ def step_vgg16_post_dataflow_partition_check(model: ModelWrapper, cfg: DataflowB
 # -----------------------------------------------------------------------------
 # Optional VGG16 manual streamlining / HW inference steps
 # -----------------------------------------------------------------------------
-# Only include these in vggnet.yaml if you are replacing Brainsmith/FINN built-ins
-# with custom steps. If your YAML already uses step_streamline and
-# step_convert_to_hw, do not add these manual replacements.
 
 @step(name="vgg16_streamline")
 def vgg16_manual_streamline_step(model: ModelWrapper, cfg: DataflowBuildConfig):
@@ -532,7 +487,6 @@ def vgg16_clean_transposes_before_hw_step(model: ModelWrapper, cfg: DataflowBuil
         InferDataLayouts(),
         AbsorbConsecutiveTransposes(),
         MoveScalarLinearPastInvariants(),
-        #Streamline(),
         AbsorbTransposeIntoMultiThreshold(),
         AbsorbConsecutiveTransposes(),
     ]:
@@ -600,6 +554,8 @@ def vgg16_manual_infer_hw_layers_step(model: ModelWrapper, cfg: DataflowBuildCon
 
     _assert_no_residual_like_adds(model, "vgg16_manual_infer_hw_layers")
     return _save_and_check(model, cfg, "manual_infer_hw_layers")
+
+
 @step(name="vgg16_specialize_remaining_hw_layers")
 def vgg16_specialize_remaining_hw_layers_step(
     model: ModelWrapper,
@@ -607,7 +563,6 @@ def vgg16_specialize_remaining_hw_layers_step(
 ):
     """
     Run after build_hw_graph and before minimize_bit_width / estimate reports.
-
     """   
 
     # Resolve FPGA part. Pynq-Z1 uses xc7z020clg400-1.

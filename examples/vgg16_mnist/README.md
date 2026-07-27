@@ -34,7 +34,7 @@
 | **vgg16_streamline** *(optional)*        | Replacement for built-in streamline | Manual streamline implementation                                                   | Executes FINN `Streamline`, transpose absorption, graph sorting                                                                         | 
 | **vgg16_clean_transposes_before_hw**     | Before HW inference                 | Eliminates transpose/layout issues that interfere with hardware inference          | Removes transpose chains, converts pooling, lowers convolutions to MatMul, removes Conv→FC flatten operations                           |
 | **vgg16_infer_hw_layers**                | Hardware inference                  | Converts remaining neural-network layers into FINN hardware operators              | Infers MVAU, Thresholding, ConvolutionInputGenerator, Pool, ChannelwiseLinear, LabelSelect, etc.                                        | 
-| **vgg16_specialize_remaining_hw_layers** | After HW graph generation           | Converts generic hardware operators into FPGA-specific HLS/RTL implementations     | Runs `SpecializeLayers`, annotates cycle estimates, checks that no unsupported generic operators remain                                 | 
+| **vgg16_specialize_remaining_hw_layers** | Hardware inference           | Converts generic hardware operators into FPGA-specific HLS/RTL implementations     | Runs `SpecializeLayers`, annotates cycle estimates, checks that no unsupported generic operators remain                                 | 
 
 
 **For any such similar model these custom steps are required because:**

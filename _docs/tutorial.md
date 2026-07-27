@@ -85,7 +85,17 @@ The quantized ONNX file is generated as a result of the compilation of the model
 6. Use the following command to view the project directory information:
 
        brainsmith project info
-   
+
+
+## Generated Outputs
+
+The following outputs will be generated regardless of which particular outputs are selected:
+
+- build_dataflow.log is the build logfile that will contain any warnings/errors
+- time_per_step.json will report the time (in seconds) each build step took
+- final_hw_config.json will contain the final (after parallelization, FIFO sizing etc) hardware configuration for the build. It is written by the FIFO sizing step, so it is not produced for estimate-only builds (where FIFO sizing is skipped)
+- template_specialize_layers_config.json is an example json ile that can be used to set the specialize layers config.
+- intermediate_models/ will contain the ONNX file(s) produced after each build step.
 
 ---
 

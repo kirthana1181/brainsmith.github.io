@@ -1,6 +1,6 @@
 # model_build_vgg16_two_file.py
 # Local, non-Docker VGGNet-16 QONNX export + FINN build script.
-# This file uses only one companion file: custom_steps_vgg16_two_file.py
+# This file uses only one companion file: custom_steps.py
 
 import argparse
 import os

@@ -22,7 +22,7 @@
 
 ## Custom steps defined:
 
-| Custom Step                              | Pipeline Stage                      | Primary Purpose                                                                    | Main Transformations Performed                                                                                                          |
+| Custom Step                              | Order                      | Primary Purpose                                                                    | Main Transformations Performed                                                                                                          |
 | ---------------------------------------- | ----------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | 
 | **pre-input clean**                      | Before `qonnx_to_finn`              | Cleans the exported QONNX graph while preserving quantization information          | Removes redundant tensors, folds constants, converts GEMM→MatMul, normalizes datatypes/layouts, removes identity operators, sorts graph | 
 | **post_qonnx_to_finn**                   | Immediately after `qonnx_to_finn`   | Verifies successful conversion from QONNX to FINN representation                   | Checks that `Quant`, `BinaryQuant`, and `Trunc` operators have disappeared and performs graph cleanup                                   | 

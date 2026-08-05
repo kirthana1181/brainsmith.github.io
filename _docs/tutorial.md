@@ -94,8 +94,14 @@ The following outputs will be generated regardless of which particular outputs a
 - build_dataflow.log is the build logfile that will contain any warnings/errors
 - time_per_step.json will report the time (in seconds) each build step took
 - final_hw_config.json will contain the final (after parallelization, FIFO sizing etc) hardware configuration for the build. It is written by the FIFO sizing step, so it is not produced for estimate-only builds (where FIFO sizing is skipped)
-- template_specialize_layers_config.json is an example json ile that can be used to set the specialize layers config.
+- template_specialize_layers_config.json is an example json file that can be used to set the specialize layers config.
 - intermediate_models/ will contain the ONNX file(s) produced after each build step.
+
+## Challenges in Design Process
+
+1. Selecting the suitable set of transformations/FINN Custom operations specific to the DNN architecture, to apply at the intermediate ONNX graphs generated.
+2. Writing custom steps for parsing through the complete build flow for efficient conversion of the ONNX Graph nodes into fpgadataflow nodes, as per the intermediate ONNX graph.
+3. Some of the suitable and important custom steps which could be crucial include 'pre-dataflow_cleanup' (before '_qonnx_to_finn_' step), 'pre-streamline' (before '_streamline_' step), 'tailored_streamline' (in place of the pre-defined '_streamline_' step).
 
 ---
 

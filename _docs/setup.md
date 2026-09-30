@@ -66,5 +66,7 @@ NOTE: As an open-source framework under development, there could be several depe
 ![Successful FINN installation message]({{ '/assets/images/finn-installation.png' | relative_url }})
 
 
+
+
 ![Successful Brainsmith installation message]({{ '/assets/images/brainsmith-installation.png' | relative_url }})
 

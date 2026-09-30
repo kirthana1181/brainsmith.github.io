@@ -1,26 +1,3 @@
-#!/usr/bin/env python3
-"""
-gen_folding_vgg16.py
-
-Generate a FINN/BrainSmith folding configuration JSON for the VGG16-style
-QONNX/FINN graph after HW-layer conversion/specialization.
-
-This script is based on the same structure as the LeNet-5 folding generator,
-but adds a VGG16-specific legality rule for FINN HLS MVAU nodes:
-
-    SIMD >= MW / 1024
-
-The failing case in the VGG16 build was:
-
-    MVAU_hls_8: MW=4608, SIMD=4
-
-Since ceil(4608 / 1024) = 5, SIMD=4 is illegal. For VGG-style 3x3 convs
-with 512 input channels, MW=3*3*512=4608. This generator selects a legal
-SIMD divisor, preferably a power-of-two that is also compatible with the
-preceding ConvolutionInputGenerator input-channel parallelism. For MW=4608
-and IFMChannels=512, this becomes SIMD=8.
-"""
-
 from __future__ import annotations
 
 import argparse

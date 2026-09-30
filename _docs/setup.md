@@ -66,5 +66,4 @@ NOTE: As an open-source framework under development, there could be several depe
 ![Successful FINN installation messsage](/assets/images/Screenshot(1).png)
 
 
-
 ![Successful Brainsmith Installation message](/assets/images/Screenshot(2).png)

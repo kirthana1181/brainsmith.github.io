@@ -1,8 +1,8 @@
 title: Brainsmith
 description: Automated FPGA Dataflow Accelerator Generation
 
-url: "https://kirthana1181.github.io"
-baseurl: "/brainsmith.github.io"
+url: "https://brainsmith.github.io"
+baseurl: "/kirthana1181"
 
 theme: jekyll-theme-minimal
 

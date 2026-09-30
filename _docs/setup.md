@@ -60,10 +60,11 @@ There were many dependency issues faced at the time of the compiler installation
    And check the installation status again using the same verification command. Following this, we've run the shell setup script once gain.
    The below images, are a result of the second installation method.
    
-NOTE: As an open-source framework under development, there could be several dependency issues. Hence at the time of installation and set-up, any such issue should be considered as sensitive and handled carefully with thorough knowledge of the dependencies of this framework, and solutions targeting exactly onto these bottlenecks. Once after successful installation, it is better to avoid taking steps which require uninstalling of any of the dependencies. Also, make sure to look for deprecated libraries and/ upgrade/remove them, based on the current version's rquirement.
+NOTE: As an open-source framework under development, there could be several dependency issues. Hence at the time of installation and set-up, any such issue should be considered as sensitive and handled carefully with thorough knowledge of the dependencies of this framework, and solutions targeting exactly onto these bottlenecks. Once after successful installation, it is better to avoid taking steps which require uninstalling of any of the dependencies. Also, make sure to look for deprecated libraries and upgrade/remove them, based on the current version's rquirement.
 
 
-![Successful FINN installation messsage](/assets/images/Screenshot(1).png)
+![Successful FINN installation message]({{ '/assets/images/finn-installation.png' | relative_url }})
 
 
-![Successful Brainsmith Installation message](/assets/images/Screenshot(2).png)
+![Successful Brainsmith installation message]({{ '/assets/images/brainsmith-installation.png' | relative_url }})
+
